@@ -1,0 +1,157 @@
+/* ☰ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  grid-template-columns: auto 1fr;
+}
+
+.left-div-container {
+  display: none;
+}
+
+.right-div-container {
+  width: 100%;
+  height: 100%;
+
+  background: #fff;
+}
+
+.right-div-container .navi {
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #dfd9bf;
+  color: #fff;
+}
+
+.navi h1 {
+  text-shadow: #000 8px 10px 16px;
+}
+
+.navi ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navi ul li {
+  margin: 0 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navi a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+
+  transition: 0.2s ease-in;
+}
+
+.navi a:not(.active) {
+  color: #000;
+}
+
+.navi .active {
+  color: white;
+  background: #686452;
+  border-radius: 10px;
+}
+
+.navi a:hover {
+  background: #686452;
+  color: white !important;
+  transition: 0.2s ease-out;
+  transform: translateY(10px);
+  border-radius: 10px;
+  box-shadow: #686452 10px 10px 15px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .left-div-container {
+    width: 30%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: stretch;
+    justify-content: stretch;
+    background: #686452;
+  }
+
+  .title-place {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+    color: white;
+    text-shadow: #000 8px 10px 16px;
+  }
+
+  .links-place {
+    width: 100%;
+    height: 100%;
+
+    background: #dfd9bf;
+  }
+
+  .links-place ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .links-place ul li {
+    margin: 40px 0;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .links-place a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 8px;
+    transition: 0.2s ease-in;
+  }
+
+  .links-place a:not(.active) {
+    color: #000;
+  }
+
+  .active {
+    color: white;
+    background: #686452;
+    border-radius: 5px;
+  }
+
+  a:hover {
+    background: #686452;
+    color: white !important;
+    transition: 0.2s ease-out;
+    transform: translateX(10px);
+    border-radius: 10px;
+    box-shadow: #686452 10px 10px 15px;
+  }
+
+  .right-div-container {
+    display: none;
+  }
+}
