@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -27,7 +31,7 @@
 
 .right-div-container .navi {
   width: 100%;
-  height: 150px;
+  height: 80px;
 
   display: flex;
   align-items: center;
@@ -50,14 +54,14 @@
 
 .navi ul li {
   margin: 0 20px;
-  font-size: 24px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .navi a {
   display: inline-block;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
 
   transition: 0.2s ease-in;
 }
@@ -72,6 +76,14 @@
   border-radius: 10px;
 }
 
+.navi .a-link img {
+  width: 17px;
+  height: 17px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
 .navi a:hover {
   background: #686452;
   color: white !important;
@@ -79,6 +91,77 @@
   transform: translateY(10px);
   border-radius: 10px;
   box-shadow: #686452 10px 10px 15px;
+}
+
+.home-page {
+  width: auto;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+
+  background: beige;
+}
+
+.home-page h1,
+p {
+  text-align: center;
+  margin: 50px;
+  text-shadow: #000 2px 2px 16px;
+}
+
+.topic-page {
+  width: auto;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+
+  background: beige;
+}
+
+.topic-top-title {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-bottom-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+.option-one,
+.option-two,
+.option-three {
+  background: #686452;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-one a,
+.option-two a,
+.option-three a {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  margin: 20px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
@@ -142,7 +225,15 @@
     border-radius: 5px;
   }
 
-  a:hover {
+  .a-one img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+  }
+
+  .links-place a:hover {
     background: #686452;
     color: white !important;
     transition: 0.2s ease-out;
@@ -151,7 +242,132 @@
     box-shadow: #686452 10px 10px 15px;
   }
 
-  .right-div-container {
+  .home-page {
+    width: auto;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+
+    background: beige;
+  }
+
+  .topic-page {
+    width: auto;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+
+    background: beige;
+  }
+
+  .topic-top-title {
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topic-bottom-body {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .option-one,
+  .option-two,
+  .option-three {
+    background: #686452;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option-one a,
+  .option-two a,
+  .option-three a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .right-div-container .navi {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .topic-page {
+    width: auto;
+    height: 160vh;
+
+    display: grid;
+    grid-template-rows: repeat(1, 300px);
+    align-items: center;
+    justify-content: center;
+
+    background: beige;
+  }
+
+  .topic-top-title {
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topic-bottom-body {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option-one,
+  .option-two,
+  .option-three {
+    background: #686452;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .option-one a,
+  .option-two a,
+  .option-three a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin: 20px;
+    text-align: center;
   }
 }
